@@ -1,0 +1,9 @@
+{
+  "name": "neumorphism-ui",
+  "version": "1.0.0",
+  "description": "Simple CSS framework of Neumorphism UI deisgn",
+  "main": "index.js",
+  "author": "Jacky Wang <www.wangzixiao@gmail.com>",
+  "license": "MIT",
+  "private": false
+}

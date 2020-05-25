@@ -1,0 +1,19 @@
+@import './variables';
+@import './mixins';
+
+@include getColorSet($silver, "silver");
+@include getColorSet($gray, "gray");
+@include getColorSet($black, "black");
+@include getColorSet($purple, "purple");
+@include getColorSet($fuchsia, "fuchsia");
+@include getColorSet($maroon, "maroon");
+@include getColorSet($red, "red");
+@include getColorSet($orange, "orange");
+@include getColorSet($yellow, "yellow");
+@include getColorSet($lime, "lime");
+@include getColorSet($green, "green");
+@include getColorSet($olive, "olive");
+@include getColorSet($teal, "teal");
+@include getColorSet($aqua, "aqua");
+@include getColorSet($blue, "blue");
+@include getColorSet($navy, "navy");

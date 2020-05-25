@@ -1,0 +1,45 @@
+@use "sass:color";
+@import "./variables";
+
+@mixin getClickableRaised($depth, $color: $gray) {
+    @include getRaised($depth, $color);
+    outline: none;
+    &:hover {
+        background-image: linear-gradient(145deg, color.scale($color, $lightness: 45%), color.scale($color, $lightness: -17%));
+        &:active {
+            background-image: linear-gradient(145deg, color.scale($color, $lightness: -17%), color.scale($color, $lightness: 45%));
+        }
+    }
+}
+
+@mixin getRaised($depth, $color: $gray) {
+    $distance: $depth * 1px;
+    cursor: pointer;
+    background-color: $color;
+    box-shadow: $distance $distance $distance*2.5 color.scale($color, $lightness: -30%),
+        $distance*-1 $distance*-1 $distance*2.5 color.scale($color, $lightness: 100%);
+}
+
+@mixin getColorSet($color, $color-name) {
+  .#{$color-name} {
+    color: $color;
+    @for $i from 1 to 10 {
+      &-light-#{$i} {
+        color: color.scale($color, $lightness: 10% * $i);
+      }
+      &-dark-#{$i} {
+        color: color.scale($color, $lightness: -10% * $i);
+      }
+
+      &-bg {
+        background-color: $color;
+        &-light-#{$i} {
+          background-color: color.scale($color, $lightness: 10% * $i);
+        }
+        &-dark-#{$i} {
+          background-color: color.scale($color, $lightness: -10% * $i);
+        }
+      }
+    } // end of for each
+  }
+}

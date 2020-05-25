@@ -8,6 +8,17 @@
 @import './form';
 @import './layout';
 
+$background-color: #dadbdc;
+
 html, body {
     margin: 0px;
+    background-color: $background-color;
+}
+
+.test {
+    padding: 25px 40px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    @include getClickableRaised(6, $background-color);
 }

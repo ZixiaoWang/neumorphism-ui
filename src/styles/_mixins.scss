@@ -2,14 +2,19 @@
 @import "./variables";
 
 @mixin getClickableRaised($depth, $color: $gray) {
-    @include getRaised($depth, $color);
-    outline: none;
-    &:hover {
-        background-image: linear-gradient(145deg, color.scale($color, $lightness: 45%), color.scale($color, $lightness: -17%));
-        &:active {
-            background-image: linear-gradient(145deg, color.scale($color, $lightness: -17%), color.scale($color, $lightness: 45%));
-        }
+  outline: none;
+  @include getRaised($depth, $color);
+  @include getClickableRaisedBackground(($color));
+}
+
+@mixin getClickableRaisedBackground ($color: $gray) {
+  background-color: $color;
+  &:hover {
+    background-image: linear-gradient(145deg, color.scale($color, $lightness: 45%), color.scale($color, $lightness: -17%));
+    &:active {
+        background-image: linear-gradient(145deg, color.scale($color, $lightness: -17%), color.scale($color, $lightness: 45%));
     }
+}
 }
 
 @mixin getRaised($depth, $color: $gray) {

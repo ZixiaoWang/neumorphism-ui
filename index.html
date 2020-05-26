@@ -1,20 +1,40 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-05-26 18:05:02
+ * @LastEditTime: 2020-05-26 18:24:55
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /Neumorphism/index.html
+-->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
     <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
         .x-container {
             width: 100%;
             max-width: 1200px;
             margin: auto;
+            padding: 20px;
         }
+
         .x-section {
             padding: 40px 0px;
+        }
+
+        button+button {
+            margin-left: 10px;
         }
     </style>
     <title>Neumorphism UI</title>
 </head>
+
 <body>
     <div class="x-container">
         <section class="x-section">
@@ -28,8 +48,11 @@
         <hr>
         <section class="x-section">
             <h3>Buttons</h3>
-            <button class="test">click</button>
+            <button class="button">normal</button>
+            <button class="button is-danger">danger</button>
+            <button class="button" disabled>disabled</button>
         </section>
     </div>
 </body>
+
 </html>

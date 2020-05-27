@@ -6744,13 +6744,30 @@
 }
 
 .input {
+  width: 100%;
+  padding: 15px 12px;
+  border-radius: 8px;
+  outline: none;
+}
+.input:not(:disabled) {
   cursor: pointer;
   background-color: #cccccc;
   border: 2px solid #d9d9d9;
-  box-shadow: 3px 3px 7.5px #8f8f8f, -3px -3px 7.5px white;
-  padding: 15px;
-  border-radius: 8px;
-  outline: none;
+  box-shadow: 3px 3px 7.5px #8f8f8f, -3px -3px 7.5px white, inset 3px 3px 3px #858585, inset -3px -3px 3px white;
+  background-color: white;
+}
+.input:not(:disabled).is-error {
+  cursor: pointer;
+  background-color: #FF4136;
+  border: 2px solid #ff7168;
+  box-shadow: 3px 3px 7.5px #d80c00, -3px -3px 7.5px white, inset 3px 3px 3px #c90b00, inset -3px -3px 3px white;
+  background-color: white;
+  border-color: #ff7168;
+}
+.input:disabled {
+  border: 2px solid #999999;
+  background-color: transparent;
+  cursor: not-allowed;
 }
 
 html, body {

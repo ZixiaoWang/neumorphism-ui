@@ -26,6 +26,17 @@
         $distance*-1 $distance*-1 $distance*2.5 color.scale($color, $lightness: 100%);
 }
 
+@mixin getRaisedBorder($depth, $color: $gray) {
+  $distance: $depth * 1px;
+  cursor: pointer;
+  background-color: $color;
+  border: 2px solid color.scale($color, $lightness: 25%);
+  box-shadow: $distance $distance $distance*2.5 color.scale($color, $lightness: -30%),
+      $distance*-1 $distance*-1 $distance*2.5 color.scale($color, $lightness: 100%),
+      inset $distance $distance $distance color.scale($color, $lightness: -35%),
+      inset $distance*-1 $distance*-1 $distance color.scale($color, $lightness: 100%);
+}
+
 @mixin getColorSet($color, $color-name) {
   .#{$color-name} {
     color: $color;

@@ -1,10 +1,28 @@
+@use 'sass:color';
 @import '../variables';
 @import '../mixins';
 @import '../colors';
 
 .input {
-    @include getRaised(3, #cccccc);
-    padding: 15px;
+    width: 100%;
+    padding: 15px 12px;
     border-radius: 8px;
     outline: none;
+
+    &:not(:disabled) {
+        @include getRaisedBorder(3, #cccccc);
+        background-color: white;
+
+        &.is-error {
+            @include getRaisedBorder(3, $red);
+            background-color: white;
+            border-color: color.scale($red, $lightness: 25%);
+        }
+    }
+
+    &:disabled {
+        border: 2px solid #999999;
+        background-color: transparent;
+        cursor: not-allowed;
+    }
 }

@@ -4,7 +4,7 @@
 
 .button {
     padding: 15px 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-radius: 8px;
     outline: none;
     border: none;
@@ -12,13 +12,33 @@
     &:not(:disabled) {
         @include getClickableRaised(3, #CCCCCC);
 
+        &.is-info {
+            @include getClickableRaisedBackground($aqua);
+            color: #333333;
+        }
+        &.is-success {
+            @include getClickableRaisedBackground($green);
+            color: white;
+        }
         &.is-danger {
             @include getClickableRaisedBackground($red);
+            color: white;
+        }
+        &.is-warning {
+            @include getClickableRaisedBackground($orange);
+            color: white;
         }
     }
 
+    &.is-small {
+        padding: 8px 14px;
+    }
+    &.is-large {
+        padding: 20px 28px;
+    }
+
     &:disabled {
-        border: 1px solid #999999;
+        border: 2px solid #999999;
         background-color: transparent;
         cursor: not-allowed;
     }

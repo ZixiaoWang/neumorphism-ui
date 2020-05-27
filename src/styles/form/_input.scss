@@ -1,0 +1,10 @@
+@import '../variables';
+@import '../mixins';
+@import '../colors';
+
+.input {
+    @include getRaised(3, #cccccc);
+    padding: 15px;
+    border-radius: 8px;
+    outline: none;
+}

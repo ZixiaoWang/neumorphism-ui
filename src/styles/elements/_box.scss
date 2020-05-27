@@ -1,0 +1,10 @@
+@import '../variables';
+@import '../mixins';
+@import '../colors';
+
+.box {
+    @include getRaised(3, #cccccc);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: transparent;
+}

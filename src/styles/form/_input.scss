@@ -12,6 +12,7 @@
     &:not(:disabled) {
         @include getRaisedBorder(3, #cccccc);
         background-color: white;
+        cursor: text !important;
 
         &.is-error {
             @include getRaisedBorder(3, $red);

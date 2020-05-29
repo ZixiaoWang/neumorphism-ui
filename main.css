@@ -4451,6 +4451,7 @@
   background-color: #cccccc;
   border: 2px solid #d9d9d9;
   box-shadow: 3px 3px 7.5px #8f8f8f, -3px -3px 7.5px white;
+  cursor: initial;
   padding: 1.5rem;
   border-radius: 1rem;
   background-color: transparent;
@@ -8989,6 +8990,7 @@
   border: 2px solid #d9d9d9;
   box-shadow: 3px 3px 7.5px #8f8f8f, -3px -3px 7.5px white, inset 3px 3px 3px #858585, inset -3px -3px 3px white;
   background-color: white;
+  cursor: text !important;
 }
 .input:not(:disabled).is-error {
   cursor: pointer;

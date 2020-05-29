@@ -1,0 +1,31 @@
+@import '../variables';
+@import '../mixins';
+@import '../colors';
+
+.table {
+    @include getRaised(2);
+    width: 100%;
+    border: none;
+    border-spacing: 0px;
+    background-color: transparent;
+
+    thead {
+        tr {
+            background-color: inherit !important;
+        }
+    }
+
+    tbody {
+        border-top: 1px solid #aaaaaa;
+    }
+
+    td, th {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid #999999;
+    }
+
+    tr:nth-of-type(2n+1) {
+        background-color: rgba(0,0,0, 0.1);
+    }
+}

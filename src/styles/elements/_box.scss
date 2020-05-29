@@ -3,7 +3,7 @@
 @import '../colors';
 
 .box {
-    @include getRaised(3, #cccccc);
+    @include getRaised(3);
     cursor: initial;
     padding: 1.5rem;
     border-radius: 1rem;

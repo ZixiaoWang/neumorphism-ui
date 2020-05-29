@@ -10,7 +10,7 @@
     border: none;
 
     &:not(:disabled) {
-        @include getClickableRaised(3, #CCCCCC);
+        @include getClickableRaised(3);
 
         &.is-info {
             @include getClickableRaisedBackground($aqua);

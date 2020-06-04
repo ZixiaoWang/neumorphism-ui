@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "sass:math";
 @import "./variables";
 
 // Internal Usage
@@ -27,21 +28,26 @@
 }
 
 @mixin getRaised($depth, $color: transparent) {
-    $distance: $depth * 1px;
+    $distance: math.abs($depth * 1px);
     cursor: pointer;
     background-color: $color;
-    box-shadow: $distance $distance $distance*2.5 lighten(-35%),
-        $distance*-1 $distance*-1 $distance*2.5 lighten(85%);
+    @if $depth >= 0 {
+      box-shadow: $distance $distance $distance*2.5 lighten(-35%),
+      $distance*-1 $distance*-1 $distance*1.5 lighten(45%);
+    } @else {
+      box-shadow: inset $distance $distance $distance lighten(-35%),
+      inset $distance*-1 $distance*-1 $distance lighten(65%);
+    }
 }
 
 @mixin getRaisedBorder($depth, $color: transparent) {
   $distance: $depth * 1px;
   cursor: pointer;
   background-color: $color;
-  box-shadow: $distance $distance $distance*2 lighten(-35%),
-      $distance*-1 $distance*-1 $distance*2 lighten(85%),
-      inset $distance $distance $distance lighten(-65%),
-      inset $distance*-1 $distance*-1 $distance lighten(85%);
+  box-shadow: $distance $distance $distance*2.5 lighten(-55%),
+      $distance*-1 $distance*-1 $distance*2.5 lighten(45%),
+      inset $distance $distance $distance lighten(-55%),
+      inset $distance*-1 $distance*-1 $distance lighten(45%);
 }
 
 @mixin getColorSet($color, $color-name) {

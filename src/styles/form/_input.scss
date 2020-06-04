@@ -8,16 +8,17 @@
     padding: 15px 12px;
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, 0.8);
+    color: #333333;
     outline: none;
 
     &:not(:disabled) {
         @include getRaisedBorder($input_depth);
-        background-color: rgba(white, 0.5);
+        background-color: transparent;
         cursor: text !important;
 
         &.is-error {
             @include getRaisedBorder($input_depth, $red);
-            background-color: rgba(white, 0.65);
+            background-color: transparent;
             border-color: color.scale($red, $lightness: 15%);
         }
     }
@@ -25,6 +26,7 @@
     &:disabled {
         border: 2px solid #999999;
         background-color: transparent;
+        color: #cccccc;
         cursor: not-allowed;
     }
 }

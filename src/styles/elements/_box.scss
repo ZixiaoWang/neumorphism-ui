@@ -8,4 +8,9 @@
     padding: 1.5rem;
     border-radius: 1rem;
     background-color: transparent;
+
+    &.is-inset {
+        @include getRaised($box_depth * -1);
+        cursor: initial;
+    }
 }

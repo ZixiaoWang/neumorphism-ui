@@ -31,7 +31,7 @@
     cursor: pointer;
     background-color: $color;
     box-shadow: $distance $distance $distance*2.5 lighten(-35%),
-        $distance*-1 $distance*-1 $distance*2.5 lighten(65%);
+        $distance*-1 $distance*-1 $distance*2.5 lighten(85%);
 }
 
 @mixin getRaisedBorder($depth, $color: transparent) {
@@ -39,9 +39,9 @@
   cursor: pointer;
   background-color: $color;
   box-shadow: $distance $distance $distance*2 lighten(-35%),
-      $distance*-1 $distance*-1 $distance*2 lighten(65%),
+      $distance*-1 $distance*-1 $distance*2 lighten(85%),
       inset $distance $distance $distance lighten(-65%),
-      inset $distance*-1 $distance*-1 $distance lighten(100%);
+      inset $distance*-1 $distance*-1 $distance lighten(85%);
 }
 
 @mixin getColorSet($color, $color-name) {

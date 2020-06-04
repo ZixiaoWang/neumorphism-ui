@@ -7,10 +7,11 @@
     font-size: 1rem;
     border-radius: 8px;
     outline: none;
-    border: none;
+    border: 2px solid rgba(255,255,255, 0.2);
+    overflow: hidden;
 
     &:not(:disabled) {
-        @include getClickableRaised(3);
+        @include getClickableRaised($button_depth);
 
         &.is-info {
             @include getClickableRaisedBackground($aqua);

@@ -33,7 +33,8 @@
             margin-left: 10px;
         }
 
-        input+input {
+        input+input,
+        .progress+.progress {
             margin-top: 15px;
         }
     </style>
@@ -63,14 +64,21 @@
             <button class="button is-small">small</button>
             <button class="button">normal</button>
             <button class="button is-large">large</button>
+            <br><br>
+            <button class="button is-small is-rounded">rounded</button>
+            <button class="button is-rounded">rounded</button>
+            <button class="button is-large is-rounded">rounded</button>
         </section>
 
         <hr>
         <section class="x-section">
             <h3>Inputs</h3>
-            <input type="text" class="input" placeholder="placeholder">
-            <input type="text" class="input is-error" placeholder="placeholder">
-            <input type="text" class="input" disabled placeholder="placeholder">
+            <input type="text" class="input" placeholder="normal input field">
+            <input type="text" class="input is-error" placeholder="error input field">
+            <input type="text" class="input" disabled placeholder="disabled input field">
+            <input type="text" class="input is-rounded" placeholder="rounded input">
+            <input type="text" class="input is-error is-rounded" placeholder="error rounded input">
+            <input type="text" disabled class="input is-rounded" placeholder="disabled rounded input">
         </section>
 
         <hr>
@@ -92,6 +100,15 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, fugit.
                 </p>
             </div>
+        </section>
+
+        <hr>
+        <section class="x-section">
+            <h3>Progress</h3>
+            <div class="progress is-small"></div>
+            <div class="progress"></div>
+            <div class="progress is-large"></div>
+            <div class="progress is-very-large"></div>
         </section>
     </div>
 </body>

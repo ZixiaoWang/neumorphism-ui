@@ -5,6 +5,7 @@
 .button {
     padding: 15px 20px;
     font-size: 1rem;
+    line-height: 1.2rem;
     border-radius: 8px;
     border: none;
     outline: none;
@@ -33,9 +34,18 @@
 
     &.is-small {
         padding: 8px 14px;
+        &.is-rounded {
+            border-radius: 18px;
+        }
     }
     &.is-large {
         padding: 20px 28px;
+        &.is-rounded {
+            border-radius: 30px;
+        }
+    }
+    &.is-rounded {
+        border-radius: 25px;
     }
 
     &:disabled {

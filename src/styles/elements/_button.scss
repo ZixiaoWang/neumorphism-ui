@@ -3,20 +3,22 @@
 @import '../colors';
 
 .button {
-    padding: 15px 20px;
+    padding: 0.75rem 20px;
     font-size: 1rem;
     line-height: 1.2rem;
     border-radius: 8px;
     border: none;
     outline: none;
     overflow: hidden;
+    color: white;
+    text-shadow: 0px 0px 4px white;
 
     &:not(:disabled) {
         @include getClickableRaised($button_depth);
 
         &.is-info {
             @include getClickableRaisedBackground($aqua);
-            color: #333333;
+            color: white;
         }
         &.is-success {
             @include getClickableRaisedBackground($green);

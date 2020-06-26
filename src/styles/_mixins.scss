@@ -32,8 +32,8 @@
     cursor: pointer;
     background-color: $color;
     @if $depth >= 0 {
-      box-shadow: $distance $distance $distance*2.5 lighten(-35%),
-      $distance*-1 $distance*-1 $distance*1.5 lighten(45%);
+      box-shadow: $distance $distance $distance*2.5 lighten(-25%),
+      $distance*-1 $distance*-1 $distance*1.5 lighten(85%);
     } @else {
       box-shadow: inset $distance $distance $distance lighten(-35%),
       inset $distance*-1 $distance*-1 $distance lighten(65%);
